@@ -5,31 +5,15 @@
 1. Endpoints
 * **/users/<int:user_id>** GET - принимает id пользователя, если пользователь существует возвращает его, иначе возвращает ошибку
 example:
-    req curl 'http://127.0.0.1:5000/users' \
-        -H 'sec-ch-ua-platform: "Windows"' \
-        -H 'Referer;' \
-        -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0' \
-        -H 'sec-ch-ua: "Chromium";v="148", "Microsoft Edge";v="148", "Not/A)Brand";v="99"' \
-        -H 'Content-Type: application/json' \
-        -H 'sec-ch-ua-mobile: ?0' \
-        --data-raw '{"email":"erbolbaik@mail.ru","firstname":"test","lastname":"test","username":"testtesttest","birthDate":"2026-05-07"}'
+`   req curl -i -X GET 'http://127.0.0.1:5000/users/5'
     resp    {
         "error": "UNIQUE constraint failed"
         }
-    
-    req curl -i -X POST 'http://127.0.0.1:5000/users' \
-        -H 'Content-Type: application/json' \
-        --data-raw '{"email":"test@mail.ru","firstname":"test","lastname":"test","username":"testtesttest","birthDate":"2026-05-07"}'
-    resp    {
-        "firstname": "test",
-        "id": 5,
-        "lastname": "test",
-        "username": "testtesttest"
-        }
-
+`
         
 * **/users** "GET", "POST" - обрабатывает GET и возвращает список пользователей или POST для добавления пользователя
 example:
+`
     req curl -i -X GET "http://localhost:5000/users
     resp 
         [
@@ -51,7 +35,16 @@ example:
             },
             ...................
         ]
-
+`
+`
+req curl -i -X POST  'http://127.0.0.1:5000/users' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{"email":"test@mail.ru","firstname":"test","lastname":"test","username":"testtesttest","birthDate":"2026-05-07"}'
+resp
+    {
+        "error": "UNIQUE constraint failed"
+    }
+`
 ## Frontend
 
 Основные методы описаны в front/js/my.js
