@@ -4,7 +4,7 @@
 
 1. Endpoints
 * **/users/<int:user_id>** GET - принимает id пользователя, если пользователь существует возвращает его, иначе возвращает ошибку
-example:
+example:\
 `   req curl -i -X GET 'http://127.0.0.1:5000/users/5'
     resp    {
         "error": "UNIQUE constraint failed"
@@ -12,10 +12,10 @@ example:
 `
         
 * **/users** "GET", "POST" - обрабатывает GET и возвращает список пользователей или POST для добавления пользователя
-example:
+example:\
 `
-    req curl -i -X GET "http://localhost:5000/users
-    resp 
+    req curl -i -X GET "http://localhost:5000/users\
+    resp \
         [
             {
                 "birth_date": "2026-05-04",
@@ -35,7 +35,7 @@ example:
             },
             ...................
         ]
-`
+`\
 `
 req curl -i -X POST  'http://127.0.0.1:5000/users' \
     --header 'Content-Type: application/json' \
