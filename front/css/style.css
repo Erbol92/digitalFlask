@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    place-items: center;
+    max-width: 900px;
+    place-self: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#root {
+    width: 100%;
+}
+.row {
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.col {
+    flex: 1
+}
+
+.btnDiv button {
+    width: 100%;
+}
+
+.row:hover {
+    background-color: antiquewhite;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    /* display: none; */
+    width: 300px;
+    height: 200px;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid gray;
+}
