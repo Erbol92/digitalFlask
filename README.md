@@ -13,7 +13,7 @@ example:\
 ```
         
 * **/users** "GET", "POST" - обрабатывает GET и возвращает список пользователей или POST для добавления пользователя
-* 
+
 example:
 ```
     req curl -i -X GET "http://localhost:5000/users
@@ -57,6 +57,12 @@ resp
 * **renderUser** - отрисовка пользователя на странице
 * **showModal** - отображение детальных данных пользователя
 
+##
+![Все пользователя](attach/onLoad_1.jpg)
+![Ошибка добавления пользователя](attach/onAddUser_2_err.jpg)
+![Добавление пользователя](attach/onAddUser_3.jpg)
+![Добавление пользователя](attach/onAddUser_4.jpg)
+![Детальная информация о пользователе](attach/showModal_4.jpg)
 ## запуск приложения
 
 1.  git clone https://github.com/Erbol92/digitalFlask.git

@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded',async () => {
         if (result) {
             root.appendChild(renderUser([result]));
             form.reset();
+            alert('пользователь добавлен');
+        } else {
+            alert('ошибка при добавлении пользователя');
         }
     })
 
